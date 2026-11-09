@@ -1,8 +1,12 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --cream: #f1efdf;
+  --sage: #8fa58e;
+  --pink: #edc5d1;
+  --ink: #19271f;
+  --background: var(--cream);
+  --foreground: var(--ink);
 }
 
 @theme inline {
@@ -12,15 +16,49 @@
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+.intro-entry {
+  position: relative;
+  display: flex;
+  min-height: 100svh;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  padding: 32px;
+  background: var(--sage);
+  color: var(--ink);
+  cursor: pointer;
+}
+
+.portfolio-menu {
+  display: grid;
+  min-height: 100svh;
+  grid-template-columns: 1fr 1fr;
+  background: var(--cream);
+}
+
+.portrait-panel {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding: 32px;
+  background: var(--sage);
+}
+
+.menu-logo { position: absolute; top: 24px; left: 24px; }
+.portfolio-menu nav a:hover { text-decoration: underline; text-decoration-color: var(--pink); text-underline-offset: 12px; }
+button:focus-visible, a:focus-visible { outline: 3px solid var(--ink); outline-offset: -6px; }
+@media (max-width: 640px) {
+  .portfolio-menu { grid-template-columns: 1fr; }
+  .portrait-panel { min-height: 32svh; }
+  .portfolio-menu nav { padding: 32px; }
+  .portfolio-menu nav a { font-size: clamp(32px, 10vw, 48px); }
 }

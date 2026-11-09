@@ -1,36 +1,61 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Nicole Bustos · Personal Portfolio
 
-## Getting Started
+A little code, a little creativity, and a place to share what I’m building.
 
-First, run the development server:
+I’m Nicole, a computer science student at the University of Central Florida. This is the source for my personal portfolio, inspired by Persona’s expressive menus and my love of art, music, and cockatiels.
 
-```bash
+## A work in progress
+
+The site is in early development. The current version has an entry screen, a menu skeleton, a cockatiel logo, and a sage green, pink, and cream palette. Some artwork and content are still placeholders.
+
+I’m drawing the opening scene myself: a seated portrait that will transition into a closer view with the portfolio menu beside it. The illustration, camera movement, and subtle hair animation are planned work, with layouts adapted for desktop and mobile.
+
+## Built with
+
+- Next.js App Router, React, and TypeScript
+- Tailwind CSS and custom CSS
+- Vercel for hosting and pull-request previews
+- GitHub Actions for lint and production-build checks
+
+## Run locally
+
+Use Node.js 22 and npm, matching the version configured in CI.
+
+```sh
+git clone https://github.com/nickycodezz/personal-port.git
+cd personal-port
+npm ci
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [localhost:3000](http://localhost:3000). If that port is occupied, use the local address printed in the terminal.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```sh
+npm run lint   # Check code quality
+npm run build  # Create and type-check the production build
+npm run start  # Serve the production build after building
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Project structure
 
-## Learn More
+```text
+app/
+  page.tsx       Entry screen and menu
+  layout.tsx     Shared layout, fonts, and metadata
+  globals.css    Palette and shared styles
+public/          Static assets, including the cockatiel logo
+.github/         Automated checks and pull-request template
+AGENTS.md        Project guidance for AI-assisted development
+```
 
-To learn more about Next.js, take a look at the following resources:
+## How changes are reviewed
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Development happens in small changes on separate branches. Each pull request is checked by GitHub Actions and gets a Vercel preview so the appearance and behavior can be reviewed before merging. AI review feedback is evaluated alongside those checks and manual testing.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+I review the result before merging into `main`. Finished branches are removed after merging.
 
-## Deploy on Vercel
+## Art direction
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+The aim is a personal, Persona-inspired experience that stays easy to navigate and quick to load. The opening artwork will be my own layered illustration; buttons and menu text stay separate from the drawing so they remain readable and usable across screen sizes.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Persona is a visual inspiration. This portfolio is an independent personal project and is not affiliated with Atlus or Sega.

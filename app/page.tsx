@@ -14,7 +14,7 @@ export default function Home() {
         onClick={() => setEntered(true)}
         className="intro-entry"
       >
-        <Image src="/cockatiel.svg" alt="Nicole’s cockatiel logo" width={80} height={80} priority />
+        <Image className="menu-logo" src="/cockatiel.svg" alt="Nicole’s cockatiel logo" width={56} height={56} priority />
         [ intro art: me in the room sitting yuhh] click to enter
       </button>
     );

@@ -23,6 +23,7 @@ body {
 }
 
 .intro-entry {
+  position: relative;
   display: flex;
   min-height: 100svh;
   width: 100%;
